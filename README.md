@@ -25,14 +25,6 @@ The BGSlibrary is typically installed in the following directories by default:
 
 `/usr/local/lib/` for the library files and `/usr/local/include/bgslibrary` for the include files.
 
-To uninstall the BGSlibrary, follow these steps:
-```
-$ cd bgslibrary/build
-$ cat install_manifest.txt | xargs echo rm | sh
-$ rm -rf /usr/local/include/bgslibrary
-$ rm -rf /usr/local/lib/cmake/BGSLibrary
-```
-
 
 ### Build and run examples
 
@@ -45,4 +37,13 @@ $ cd bgslibrary-examples
 ```
 make bgslibrary_list_algorithms
 ./bgslibrary_list_algorithms
+```
+
+### Uninstall
+To uninstall the BGSlibrary, follow these steps:
+```
+$ cd bgslibrary/build
+$ cat install_manifest.txt | xargs echo rm | sh
+$ rm -rf /usr/local/include/bgslibrary
+$ rm -rf /usr/local/lib/cmake/BGSLibrary
 ```
