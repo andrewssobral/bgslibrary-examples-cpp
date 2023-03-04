@@ -21,10 +21,11 @@ $ make -j $(nproc)
 $ make install
 $ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 ```
+
 The BGSlibrary is typically installed in the following directories by default: 
-
-`/usr/local/lib/` for the library files and `/usr/local/include/bgslibrary` for the include files.
-
+* `/usr/local/bin/` for the executable files (e.g. `/usr/local/bin/bgslibrary`)
+* `/usr/local/lib/` for the library files (e.g. `/usr/local/lib/libbgslibrary_core.so` on linux or `*.dylib` on mac)
+* `/usr/local/include/` for the include files (e.g. `/usr/local/include/bgslibrary`)
 
 ### Build and run examples
 
