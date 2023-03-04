@@ -19,7 +19,7 @@ $ cd bgslibrary/build
 $ cmake ..
 $ make -j $(nproc)
 $ make install
-$ export LD_LIBRARY_PATH=/usr/local/lib
+$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 ```
 The BGSlibrary is typically installed in the following directories by default: 
 
