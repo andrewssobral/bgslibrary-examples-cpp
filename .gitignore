@@ -1,5 +1,5 @@
 .gptignore
-output.txt
+output*.txt
 bgslibrary_camera
 bgslibrary_images_sequence
 bgslibrary_list_algorithms
