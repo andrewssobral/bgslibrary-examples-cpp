@@ -39,6 +39,8 @@ pixi run install
 
 The library and headers will be installed under `.pixi/envs/default/`.
 
+**Note:** If you built BGSLibrary using Pixi, remain inside the same Pixi shell when building and running the examples below.
+
 ## Build and Run Examples
 
 Clone the examples repository and navigate to it:
