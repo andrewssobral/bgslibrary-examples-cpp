@@ -8,7 +8,7 @@ This repository showcases examples of using the BGSLibrary, a comprehensive libr
 
 ## Requirements
 
-To use the examples in this repository, you must first build and install the BGSLibrary from source. Follow the installation instructions for your platform:
+To use the examples in this repository, you must first build and install the [BGSLibrary](https://github.com/andrewssobral/bgslibrary) from source. Follow the installation instructions for your platform:
 
 - [Windows installation](https://github.com/andrewssobral/bgslibrary/wiki/Installation-instructions---Windows)
 - [Ubuntu / OS X installation](https://github.com/andrewssobral/bgslibrary/wiki/Installation-instructions-Ubuntu-or-OSX)
@@ -17,14 +17,27 @@ Quick start commands:
 
 ```bash
 git clone --recursive https://github.com/andrewssobral/bgslibrary.git
-cd bgslibrary/build
-cmake ..
-make -j $(nproc)
-make install
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+cd bgslibrary
+cmake -S . -B build
+cmake --build build -j "$(nproc)"
+sudo cmake --install build
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 ```
 
 By default, the BGSLibrary installs to `/usr/local/bin/` for executables, `/usr/local/lib/` for libraries, and `/usr/local/include/` for include files.
+
+Alternatively, build using [Pixi](https://pixi.prefix.dev/latest/) (recommended):
+
+```bash
+git clone --recursive https://github.com/andrewssobral/bgslibrary.git
+cd bgslibrary
+pixi shell
+pixi run configure
+pixi run build
+pixi run install
+```
+
+The library and headers will be installed under `.pixi/envs/default/`.
 
 ## Build and Run Examples
 
